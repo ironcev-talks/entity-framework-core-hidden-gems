@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
+using System.Text;
 
 namespace QueryTags
 {
@@ -21,7 +21,7 @@ namespace QueryTags
                 context.Customers
                     .Where(customer => customer.FirstName == "Nermina" && customer.LastName == "Kirin")
                     .ToList();
-            }            
+            }
         }
     }
 }

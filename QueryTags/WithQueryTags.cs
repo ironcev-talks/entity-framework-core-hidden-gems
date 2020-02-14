@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace QueryTags
 {
@@ -24,7 +24,7 @@ namespace QueryTags
                     .TagWith($"Some additional description of the query #{i + 1}")
                     .Where(customer => customer.FirstName == "Nermina" && customer.LastName == "Kirin")
                     .ToList();
-            }            
+            }
         }
     }
 }

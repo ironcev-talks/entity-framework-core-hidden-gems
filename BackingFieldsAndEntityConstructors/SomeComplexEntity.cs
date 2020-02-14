@@ -3,7 +3,7 @@
     public class SomeComplexEntity
     {
         private int someValue;
-        
+
         public SomeComplexEntity(string firstProperty, int someValue)
         {
             FirstProperty = firstProperty;
@@ -11,7 +11,9 @@
         }
 
         public int Id { get; private set; }
+
         public string FirstProperty { get; }
+
         public double ThirdProperty { get; private set; }
 
         public void SetThirdProperty(double newValue)
@@ -21,6 +23,7 @@
         }
 
         private int somePropertyWithLogicAndBackingField;
+
         public int SomePropertyWithLogicAndBackingField
         {
             get => somePropertyWithLogicAndBackingField;
@@ -30,7 +33,7 @@
                 if (somePropertyWithLogicAndBackingField != value)
                 {
                     somePropertyWithLogicAndBackingField = value;
-                }                
+                }
             }
         }
 

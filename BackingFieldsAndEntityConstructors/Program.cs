@@ -21,7 +21,6 @@ namespace BackingFieldsAndEntityConstructors
             db.SomeComplexEntities.Add(newEntity);
             db.SaveChanges();
 
-
             db = new BackingFieldsAndEntityConstructorsContext();
             var savedEntity = db.SomeComplexEntities.First();
 

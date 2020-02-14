@@ -13,7 +13,7 @@ namespace QueryTags
 
             Console.Clear();
 
-            //var executor = new WithoutQueryTags(db);
+            // var executor = new WithoutQueryTags(db);
             var executor = new WithQueryTags(db);
 
             executor.ExecuteLotOfQueries();

@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System.Linq;
 
 namespace DefiningQueries
 {
@@ -13,9 +13,11 @@ namespace DefiningQueries
                         .AddConsole()
                         .AddFilter((s, l) => l == LogLevel.Information && !s.EndsWith("Connection"))
                 );
+
         public DbSet<Blog> Blogs { get; set; }
+
         public DbSet<Post> Posts { get; set; }
-        
+
         public DbSet<BlogPostCount> BlogPostCounts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -11,9 +11,10 @@ namespace AsNoTracking
             db.Database.EnsureCreated();
             SeedDatabase();
 
-            //var customerService = new CustomersServiceWithTracking(db);
+            // var customerService = new CustomersServiceWithTracking(db);
             var customerService = new CustomersServiceWithExplicitNoTracking(db);
-            //var customerService = new CustomersServiceWithDefaultQueryTrackingBehaviorNoTracking(db);
+
+            // var customerService = new CustomersServiceWithDefaultQueryTrackingBehaviorNoTracking(db);
 
             foreach (var customer in customerService.GetCustomers())
                 Console.WriteLine(customer.FirstName);

@@ -11,7 +11,8 @@ namespace AsNoTracking
             optionsBuilder
                 .UseSqlServer(
                     @"Server=(localdb)\mssqllocaldb;Database=EntityFrameworkCoreHiddenGems.AsNoTracking;Trusted_Connection=True;ConnectRetryCount=0;")
-                //.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
+
+                // .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
                 ;
         }
     }
