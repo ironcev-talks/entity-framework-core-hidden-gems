@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueConversions", "ValueConversions\ValueConversions.csproj", "{BB1B413D-8F63-486A-B3B3-641592146588}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsNoTracking", "AsNoTracking\AsNoTracking.csproj", "{0F2D0257-A827-44E3-9BDB-C35AD1DED9C7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeylessEntityTypes", "KeylessEntityTypes\KeylessEntityTypes.csproj", "{4EE13A47-2E48-41B2-9F76-D444DC81E8A2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefiningQueries", "DefiningQueries\DefiningQueries.csproj", "{BF4843C5-0517-4D88-BDE3-27126F63CF3C}"
@@ -14,6 +12,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryTags", "QueryTags\QueryTags.csproj", "{8D2AC70C-3F33-45B5-8247-331A70C3D5D1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackingFieldsAndEntityConstructors", "BackingFieldsAndEntityConstructors\BackingFieldsAndEntityConstructors.csproj", "{7B107663-2B7D-4861-B0C3-A1DE6BB05F5D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsNoTracking.DefaultQueryTrackingBehavior", "AsNoTracking\AsNoTracking.DefaultQueryTrackingBehavior\AsNoTracking.DefaultQueryTrackingBehavior.csproj", "{B510FDC7-0EF8-4785-852C-B94DDB2B32E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsNoTracking.PerQuery", "AsNoTracking\AsNoTracking.PerQuery\AsNoTracking.PerQuery.csproj", "{BA1AEF16-40BD-49F9-BA1B-12FD4BADDCFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsNoTracking.QueryTrackingBehaviorNoTracking", "AsNoTracking\AsNoTracking.QueryTrackingBehaviorNoTracking\AsNoTracking.QueryTrackingBehaviorNoTracking.csproj", "{4BFCFA36-E28A-434D-90EA-E60EC24CAD5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +29,6 @@ Global
 		{BB1B413D-8F63-486A-B3B3-641592146588}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB1B413D-8F63-486A-B3B3-641592146588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB1B413D-8F63-486A-B3B3-641592146588}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F2D0257-A827-44E3-9BDB-C35AD1DED9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F2D0257-A827-44E3-9BDB-C35AD1DED9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F2D0257-A827-44E3-9BDB-C35AD1DED9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F2D0257-A827-44E3-9BDB-C35AD1DED9C7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4EE13A47-2E48-41B2-9F76-D444DC81E8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4EE13A47-2E48-41B2-9F76-D444DC81E8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EE13A47-2E48-41B2-9F76-D444DC81E8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +45,18 @@ Global
 		{7B107663-2B7D-4861-B0C3-A1DE6BB05F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B107663-2B7D-4861-B0C3-A1DE6BB05F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B107663-2B7D-4861-B0C3-A1DE6BB05F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B510FDC7-0EF8-4785-852C-B94DDB2B32E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B510FDC7-0EF8-4785-852C-B94DDB2B32E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B510FDC7-0EF8-4785-852C-B94DDB2B32E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B510FDC7-0EF8-4785-852C-B94DDB2B32E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA1AEF16-40BD-49F9-BA1B-12FD4BADDCFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1AEF16-40BD-49F9-BA1B-12FD4BADDCFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1AEF16-40BD-49F9-BA1B-12FD4BADDCFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1AEF16-40BD-49F9-BA1B-12FD4BADDCFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BFCFA36-E28A-434D-90EA-E60EC24CAD5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BFCFA36-E28A-434D-90EA-E60EC24CAD5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BFCFA36-E28A-434D-90EA-E60EC24CAD5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BFCFA36-E28A-434D-90EA-E60EC24CAD5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
