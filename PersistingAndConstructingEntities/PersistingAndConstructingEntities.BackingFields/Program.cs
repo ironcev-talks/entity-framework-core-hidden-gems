@@ -30,6 +30,8 @@ namespace EntityFrameworkCoreHiddenGems
 
             DisplayDemoStep("Loading the entities from the database");
 
+            context = new PersistingAndConstructingEntitiesContext();
+
             var loadedEntityWithRichProperties = context.EntitiesWithRichProperties.First();
             var loadedEntityWithoutProperties = context.EntitiesWithoutProperties.First();
 
