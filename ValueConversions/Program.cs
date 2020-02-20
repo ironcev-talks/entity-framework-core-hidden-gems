@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Linq;
+using ValueConversions;
 
-namespace ValueConversions
+namespace EntityFrameworkCoreHiddenGems
 {
-    public class Program
+    public partial class Program
     {
         private static void Main()
         {
-            var db = new ValueConversionsContext();
-            db.Database.EnsureDeleted();
-            db.Database.EnsureCreated();
+            var context = new ValueConversionsContext();
+            CreateDatabase(context);
 
             Console.Clear();
 
-            db.BeTrues.Add(new BeTrue
+            DisplayDemoStep("Add a new be true to the database");
+
+            context.BeTrues.Add(new BeTrue
             {
                 DaNe = true,
                 Dn = true,
@@ -23,14 +25,18 @@ namespace ValueConversions
                 OneMinusOne = true,
                 TrueFalse = true,
                 YesNo = true,
-                Yn = true
+                Yn = true,
+                SiNo = true,
+                Sn = true
             });
 
-            db.SaveChanges();
+            context.SaveChanges();
 
             Console.ReadLine();
 
-            db.BeTrues.Where(beTrue =>
+            DisplayDemoStep("Get some be trues from the database");
+
+            context.BeTrues.Where(beTrue =>
                     beTrue.DaNe ||
                     beTrue.Dn ||
                     beTrue.JaNein ||
@@ -39,16 +45,18 @@ namespace ValueConversions
                     !beTrue.OneMinusOne ||
                     !beTrue.TrueFalse ||
                     !beTrue.YesNo ||
-                    !beTrue.Yn
+                    !beTrue.Yn ||
+                    !beTrue.SiNo ||
+                    !beTrue.Sn
                 )
                 .ToList();
 
             Console.ReadLine();
 
-            foreach (var beTrue in db.BeTrues.ToList())
-                Console.WriteLine(beTrue.MyOwnTruth);
+            DisplayDemoStep("Get all be trues from the database");
 
-            Console.ReadLine();
+            foreach (var beTrue in context.BeTrues.ToList())
+                Console.WriteLine(beTrue.MyOwnTruth);
         }
     }
 }

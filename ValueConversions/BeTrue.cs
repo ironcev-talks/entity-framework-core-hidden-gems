@@ -22,6 +22,10 @@
 
         public bool Yn { get; set; }
 
+        public bool SiNo { get; set; }
+
+        public bool Sn { get; set; }
+
         public bool MyOwnTruth { get; set; }
     }
 }

@@ -1,32 +1,24 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EntityFrameworkCoreHiddenGems;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Microsoft.Extensions.Logging;
 using System;
 
 namespace ValueConversions
 {
-    public class ValueConversionsContext : DbContext
+    public class ValueConversionsContext : BaseDemoDbContext
     {
-        private static readonly ILoggerFactory LoggerFactory
-            = Microsoft.Extensions.Logging.LoggerFactory
-                .Create(builder =>
-                    builder
-                        .AddConsole()
-                        .AddFilter((s, l) => l == LogLevel.Information && !s.EndsWith("Connection"))
-                );
-
         public DbSet<BeTrue> BeTrues { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder
-                .UseSqlServer(
-                    @"Server=(localdb)\mssqllocaldb;Database=EntityFrameworkCoreHiddenGems.ValueConversions;Trusted_Connection=True;ConnectRetryCount=0;")
-                .UseLoggerFactory(LoggerFactory);
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<BeTrue>()
+                .Property(x => x.OneMinusOne)
+                .HasConversion(new BoolToTwoValuesConverter<int>(-1, 1));
+
+            modelBuilder.Entity<BeTrue>()
+                .Property(x => x.ZeroOne)
+                .HasConversion(new BoolToZeroOneConverter<int>());
+
             modelBuilder.Entity<BeTrue>()
                 .Property(x => x.DaNe)
                 .HasConversion(new BoolToStringConverter("Ne", "Da"));
@@ -52,12 +44,12 @@ namespace ValueConversions
                 .HasConversion(new BoolToStringConverter("N", "Y"));
 
             modelBuilder.Entity<BeTrue>()
-                .Property(x => x.ZeroOne)
-                .HasConversion(new BoolToZeroOneConverter<int>());
+                .Property(x => x.SiNo)
+                .HasConversion(new BoolToStringConverter("No", "Si"));
 
             modelBuilder.Entity<BeTrue>()
-                .Property(x => x.OneMinusOne)
-                .HasConversion(new BoolToTwoValuesConverter<int>(-1, 1));
+                .Property(x => x.Sn)
+                .HasConversion(new BoolToStringConverter("N", "S"));
 
             modelBuilder.Entity<BeTrue>()
                 .Property(x => x.MyOwnTruth)
