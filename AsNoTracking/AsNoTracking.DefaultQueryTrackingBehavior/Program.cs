@@ -18,11 +18,11 @@ namespace EntityFrameworkCoreHiddenGems
             foreach (var author in authorService.GetAuthors())
                 Console.WriteLine(author.FullName);
 
-            DisplayDemoStep("Do something with authors.");
+            DisplayDemoStep("Do something with authors");
 
             authorService.DoSomethingWithAuthors();
 
-            DisplayDemoStep("Get authors again.");
+            DisplayDemoStep("Get authors again");
 
             foreach (var author in authorService.GetAuthors())
                 Console.WriteLine(author.FullName);
