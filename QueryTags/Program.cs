@@ -1,24 +1,28 @@
-﻿using System;
-using System.Linq;
+﻿using QueryTags;
+using System;
 
-namespace QueryTags
+namespace EntityFrameworkCoreHiddenGems
 {
-    public class Program
+    public partial class Program
     {
         private static void Main()
         {
-            var db = new QueryTagsContext();
-            db.Database.EnsureDeleted();
-            db.Database.EnsureCreated();
+            var context = new QueryTagsContext();
+            CreateDatabase(context);
 
             Console.Clear();
 
-            // var executor = new WithoutQueryTags(db);
-            var executor = new WithQueryTags(db);
+            var examples = new QueryTagsExamples(context);
 
-            executor.ExecuteLotOfQueries();
+            DisplayDemoStep("Execute lot of queries");
+
+            examples.ExecuteLotOfQueries("go", "on");
 
             Console.ReadLine();
+
+            DisplayDemoStep("Execute lot of queries with query tags");
+
+            examples.ExecuteLotOfQueriesWithQueryTags("go", "on");
         }
     }
 }
