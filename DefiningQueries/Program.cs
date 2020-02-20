@@ -1,55 +1,44 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DefiningQueries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DefiningQueries
+namespace EntityFrameworkCoreHiddenGems
 {
-    public class Program
+    public partial class Program
     {
         private static void Main()
         {
-            var db = new DefiningQueriesContext();
-            db.Database.EnsureDeleted();
-            db.Database.EnsureCreated();
-
-            SetupDatabase();
+            var context = new DefiningQueriesContext();
+            CreateAndSeedDatabase(context, SeedDatabase);
 
             Console.Clear();
 
-            var blogPostCounts = db.BlogPostCounts.Where(counts => counts.PostCount > 1).ToList();
+            DisplayDemoStep("Show blogs with more then one post");
+
+            var blogPostCounts = context.BlogPostCounts.Where(counts => counts.NumberOfPosts > 1).ToList();
 
             foreach (var blogPost in blogPostCounts)
-                Console.WriteLine($"{blogPost.BlogName}\t{blogPost.PostCount}");
+                Console.WriteLine($"{blogPost.BlogTitle}\t{blogPost.NumberOfPosts}");
+        }
 
-            Console.ReadLine();
-
-            void SetupDatabase()
-            {
-                if (db.Blogs.Any()) return;
-
-                db.Blogs.Add(
-                    new Blog
+        private static void SeedDatabase(DefiningQueriesContext context)
+        {
+            context.Blogs.Add(
+                new Blog
+                {
+                    Title = "The Humble Programmer",
+                    Url = "http://thehumbleprogrammer.com",
+                    Posts = new List<Post>
                     {
-                        Name = "The Humble Programmer",
-                        Url = "http://thehumbleprogrammer.com",
-                        Posts = new List<Post>
-                        {
                             new Post { Title = "Shakespeare in the Castle Wolfenstein" },
                             new Post { Title = "I Am Only Human After All" },
                             new Post { Title = "Local Functions, Subtle Leaks" },
                             new Post { Title = "Await Async As Async" }
-                        }
-                    });
+                    }
+                });
 
-                db.SaveChanges();
-
-                db.Database.ExecuteSqlRaw(
-                    @"CREATE VIEW View_BlogPostCounts AS 
-                            SELECT Name, Count(post.Id) as PostCount from Blogs blog
-                            JOIN Posts post on post.Id = blog.Id
-                            GROUP BY blog.Name");
-            }
+            context.SaveChanges();
         }
     }
 }
