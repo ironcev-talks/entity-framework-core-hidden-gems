@@ -1,44 +1,30 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
+﻿using EntityFrameworkCoreHiddenGems;
+using Microsoft.EntityFrameworkCore;
 
 namespace KeylessEntityTypes
 {
-    public class KeylessEntityTypesContext : DbContext
+    public class KeylessEntityTypesContext : BaseDemoDbContext
     {
-        private static readonly ILoggerFactory LoggerFactory
-            = Microsoft.Extensions.Logging.LoggerFactory
-                .Create(builder =>
-                    builder
-                        .AddConsole()
-                        .AddFilter((s, l) => l == LogLevel.Information && !s.EndsWith("Connection"))
-                );
-
         public DbSet<Blog> Blogs { get; set; }
 
         public DbSet<Post> Posts { get; set; }
 
         public DbSet<BlogPostCount> BlogPostCounts { get; set; }
 
-        // public DbQuery<BlogPostCount> BlogPostCounts { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder
-                .UseSqlServer(
-                    @"Server=(localdb)\mssqllocaldb;Database=EntityFrameworkCoreHiddenGems.KeylessEntityTypes;Trusted_Connection=True;ConnectRetryCount=0;")
-                .UseLoggerFactory(LoggerFactory);
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BlogPostCount>()
                 .HasNoKey()
-                .ToView("View_BlogPostCounts")
-                .Property(v => v.BlogName).HasColumnName("Name");
+                .ToView("View_BlogPostCounts");
 
-            // modelBuilder.Query<BlogPostCount>()
-            //    .ToView("View_BlogPostCounts")
-            //    .Property(v => v.BlogName).HasColumnName("Name");
+            modelBuilder.Entity<BlogPostCount>()
+                .Property(x => x.BlogId).HasColumnName("Id");
+
+            modelBuilder.Entity<BlogPostCount>()
+                .Property(v => v.BlogTitle).HasColumnName("Title");
+
+            modelBuilder.Entity<BlogPostCount>()
+                .Property(v => v.NumberOfPosts).HasColumnName("Pst_Count");
         }
     }
 }

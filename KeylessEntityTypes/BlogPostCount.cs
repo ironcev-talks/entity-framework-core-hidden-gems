@@ -2,8 +2,10 @@
 {
     public class BlogPostCount
     {
-        public string BlogName { get; set; }
+        public int BlogId { get; set; }
 
-        public int PostCount { get; set; }
+        public string BlogTitle { get; set; }
+
+        public int NumberOfPosts { get; set; }
     }
 }
