@@ -9,17 +9,25 @@ namespace AsNoTracking
             var context = new AsNoTrackingContext();
             CreateAndSeedDatabase();
 
-            var customerService = new AuthorService(context);
+            Console.Clear();
 
-            foreach (var customer in customerService.GetAuthors())
-                Console.WriteLine(customer.FirstName);
+            var authorService = new AuthorService(context);
 
-            customerService.DoSomethingWithAuthors();
+            Console.WriteLine("---- Get authors. ----");
+
+            foreach (var author in authorService.GetAuthors())
+                Console.WriteLine(author.FullName);
+
+            Console.WriteLine("---- Do something with authors. ----");
+
+            authorService.DoSomethingWithAuthors();
 
             Console.WriteLine();
 
-            foreach (var customer in customerService.GetAuthors())
-                Console.WriteLine(customer.FirstName);
+            Console.WriteLine("---- Get authors again. ----");
+
+            foreach (var author in authorService.GetAuthors())
+                Console.WriteLine(author.FullName);
 
             void CreateAndSeedDatabase()
             {
@@ -33,15 +41,23 @@ namespace AsNoTracking
                     context.Authors.Add(
                         new Author
                         {
-                            FirstName = "Ana",
-                            LastName = "Kirin"
+                            FirstName = "Ivo",
+                            LastName = "Andrić"
                         });
 
                     context.Authors.Add(
                         new Author
                         {
-                            FirstName = "Nermina",
-                            LastName = "Kirin"
+                            FirstName = "Elfriede",
+                            LastName = "Jelinek"
+                        });
+
+                    context.Authors.Add(
+                        new Author
+                        {
+                            FirstName = "Juan",
+                            MiddleName = "Ramón",
+                            LastName = "Jiménez"
                         });
 
                     context.SaveChanges();

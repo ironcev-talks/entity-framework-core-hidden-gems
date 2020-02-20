@@ -19,10 +19,13 @@ namespace AsNoTracking
 
         public void DoSomethingWithAuthors()
         {
-            var customers = context.Authors.ToList();
-            foreach (var customer in customers)
+            var authors = context.Authors;
+            foreach (var author in authors)
             {
-                customer.FirstName += "...";
+                if (!string.IsNullOrWhiteSpace(author.FirstName))
+                    author.FirstName = author.FirstName.Substring(0, 1) + ".";
+                if (!string.IsNullOrWhiteSpace(author.MiddleName))
+                    author.MiddleName = author.MiddleName.Substring(0, 1) + ".";
             }
 
             context.SaveChanges();
