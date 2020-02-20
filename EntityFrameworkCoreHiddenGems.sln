@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefiningQueries", "Defining
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryTags", "QueryTags\QueryTags.csproj", "{8D2AC70C-3F33-45B5-8247-331A70C3D5D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackingFieldsAndEntityConstructors", "BackingFieldsAndEntityConstructors\BackingFieldsAndEntityConstructors.csproj", "{7B107663-2B7D-4861-B0C3-A1DE6BB05F5D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsNoTracking.DefaultQueryTrackingBehavior", "AsNoTracking\AsNoTracking.DefaultQueryTrackingBehavior\AsNoTracking.DefaultQueryTrackingBehavior.csproj", "{B510FDC7-0EF8-4785-852C-B94DDB2B32E6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsNoTracking.PerQuery", "AsNoTracking\AsNoTracking.PerQuery\AsNoTracking.PerQuery.csproj", "{BA1AEF16-40BD-49F9-BA1B-12FD4BADDCFD}"
@@ -45,10 +43,6 @@ Global
 		{8D2AC70C-3F33-45B5-8247-331A70C3D5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D2AC70C-3F33-45B5-8247-331A70C3D5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D2AC70C-3F33-45B5-8247-331A70C3D5D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B107663-2B7D-4861-B0C3-A1DE6BB05F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B107663-2B7D-4861-B0C3-A1DE6BB05F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B107663-2B7D-4861-B0C3-A1DE6BB05F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B107663-2B7D-4861-B0C3-A1DE6BB05F5D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B510FDC7-0EF8-4785-852C-B94DDB2B32E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B510FDC7-0EF8-4785-852C-B94DDB2B32E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B510FDC7-0EF8-4785-852C-B94DDB2B32E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
