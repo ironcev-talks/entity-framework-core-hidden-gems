@@ -18,7 +18,7 @@ You will leave the talk with two things under your belt - a set of powerful EF C
 
 ## Talk History
 
-I gave the talk at:
-
-- [Netsaimada [Meetup] (Palma de Mallorca, Spain; February 20th, 2020)](https://www.meetup.com/Netsaimada/events/268355607/) [(release)](https://github.com/ironcev-talks/entity-framework-core-hidden-gems/releases/tag/2020-02-20-Palma-de-Mallorca-Spain-Netsaimada-Meetup)
-- [Advanced Technology Days [Conference] (Zagreb, Croatia; December 4th, 2019)](https://advtechdays.com/predavanja/) [(release)](https://github.com/ironcev-talks/entity-framework-core-hidden-gems/releases/tag/2019-12-04-Zagreb-Croatia-Advanced-Technology-Days-Conference)
+|                           Version                            | Date                          | Event                                                        |       City        | Country |
+| :----------------------------------------------------------: | ----------------------------- | ------------------------------------------------------------ | :---------------: | ------- |
+| [v0.3.3](https://github.com/ironcev-talks/entity-framework-core-hidden-gems/releases/tag/2020-02-20-Palma-de-Mallorca-Spain-Netsaimada-Meetup) | February&nbsp;20th,&nbsp;2020 | [Netsaimada [Meetup]](https://www.meetup.com/Netsaimada/events/268355607/) | Palma de Mallorca | Spain   |
+| [v0.1.0](https://github.com/ironcev-talks/entity-framework-core-hidden-gems/releases/tag/2019-12-04-Zagreb-Croatia-Advanced-Technology-Days-Conference) | December&nbsp;4th,&nbsp;2019  | [Advanced Technology Days [Conference]](https://advtechdays.com/predavanja/) |      Zagreb       | Croatia |
