@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueConversions", "ValueConversions\ValueConversions.csproj", "{BB1B413D-8F63-486A-B3B3-641592146588}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeylessEntityTypes", "KeylessEntityTypes\KeylessEntityTypes.csproj", "{4EE13A47-2E48-41B2-9F76-D444DC81E8A2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefiningQueries", "DefiningQueries\DefiningQueries.csproj", "{BF4843C5-0517-4D88-BDE3-27126F63CF3C}"
@@ -21,16 +19,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersistingAndConstructingEn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersistingAndConstructingEntities.EntityConstructors", "PersistingAndConstructingEntities\PersistingAndConstructingEntities.EntityConstructors\PersistingAndConstructingEntities.EntityConstructors.csproj", "{39CA4857-0A38-4044-AD88-B6423865B944}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueConversions.BooleanConverters", "ValueConversions\ValueConversions.BooleanConverters\ValueConversions.BooleanConverters.csproj", "{D00BFE1B-4CD9-45FB-8499-911819E903A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB1B413D-8F63-486A-B3B3-641592146588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB1B413D-8F63-486A-B3B3-641592146588}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB1B413D-8F63-486A-B3B3-641592146588}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB1B413D-8F63-486A-B3B3-641592146588}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4EE13A47-2E48-41B2-9F76-D444DC81E8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4EE13A47-2E48-41B2-9F76-D444DC81E8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EE13A47-2E48-41B2-9F76-D444DC81E8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +59,10 @@ Global
 		{39CA4857-0A38-4044-AD88-B6423865B944}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39CA4857-0A38-4044-AD88-B6423865B944}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39CA4857-0A38-4044-AD88-B6423865B944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D00BFE1B-4CD9-45FB-8499-911819E903A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00BFE1B-4CD9-45FB-8499-911819E903A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00BFE1B-4CD9-45FB-8499-911819E903A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00BFE1B-4CD9-45FB-8499-911819E903A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

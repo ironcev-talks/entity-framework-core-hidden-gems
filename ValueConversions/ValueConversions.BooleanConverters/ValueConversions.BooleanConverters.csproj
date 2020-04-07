@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\BaseDemoDbContext.cs" Link="BaseDemoDbContext.cs" />
-    <Compile Include="..\Program.Partial.cs" Link="Program.Partial.cs" />
+    <Compile Include="..\..\BaseDemoDbContext.cs" Link="BaseDemoDbContext.cs" />
+    <Compile Include="..\..\Program.Partial.cs" Link="Program.Partial.cs" />
   </ItemGroup>
 
 </Project>
