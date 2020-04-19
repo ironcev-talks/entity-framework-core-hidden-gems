@@ -1,4 +1,4 @@
-# Entity Framework Core Hidden Gems
+![Entity Framework Core Hidden Gems](images/entity-framework-core-hidden-gems.jpg)
 
 ## Talk Description
 
