@@ -29,3 +29,7 @@ You will leave the talk with two things under your belt - a set of powerful EF C
 The latest presentation is available for viewing and download on [SlideShare](https://www.slideshare.net/roncevi/entity-framework-core-hidden-gems-v080-231160063) and [Speaker Deck](https://speakerdeck.com/ironcev/entity-framework-core-hidden-gems). The versions used in talks are available on the [release page](https://github.com/ironcev-talks/entity-framework-core-hidden-gems/releases).
 
 [![Entity Framework Core Hidden Gems](images/entity-framework-core-hidden-gems.jpg)](https://www.slideshare.net/roncevi/entity-framework-core-hidden-gems-v080-231160063)
+
+## Examples
+
+The examples are available in the [examples folder](examples). Each subfolder contains a README.md file with additional reading material.
