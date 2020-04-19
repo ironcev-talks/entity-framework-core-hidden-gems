@@ -33,3 +33,7 @@ The latest presentation is available for viewing and download on [SlideShare](ht
 ## Examples
 
 The examples are available in the [examples folder](examples). Each subfolder contains a README.md file with additional reading material.
+
+## License
+
+The examples are licensed under the [MIT license](https://github.com/ironcev-talks/entity-framework-core-hidden-gems/blob/master/LICENSE).
