@@ -34,6 +34,13 @@ The latest presentation is available for viewing and download on [SlideShare](ht
 
 The examples are available in the [examples folder](examples). Each subfolder contains a README.md file with additional reading material.
 
-## License
+## 
 
-The examples are licensed under the [MIT license](https://github.com/ironcev-talks/entity-framework-core-hidden-gems/blob/master/LICENSE).
+## License
+[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](http://creativecommons.org/publicdomain/zero/1.0)
+
+The sample source code is in the public domain. To the extent possible under law, Igor Rončević has waived all copyright and related or neighboring rights to the sample source code.
+
+[![CC BY 4.0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+The presentations are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
