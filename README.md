@@ -34,8 +34,6 @@ The latest presentation is available for viewing and download on [SlideShare](ht
 
 The examples are available in the [examples folder](examples). Each subfolder contains a README.md file with additional reading material.
 
-## 
-
 ## License
 [![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](http://creativecommons.org/publicdomain/zero/1.0)
 
