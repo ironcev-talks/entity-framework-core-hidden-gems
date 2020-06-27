@@ -23,6 +23,8 @@ namespace AsNoTracking
             var authors = context.Authors;
             foreach (var author in authors)
             {
+                if (author.FirstName == "Ivo") continue;
+
                 if (!string.IsNullOrWhiteSpace(author.FirstName))
                     author.FirstName = author.FirstName.Substring(0, 1) + ".";
                 if (!string.IsNullOrWhiteSpace(author.MiddleName))
