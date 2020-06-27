@@ -52,6 +52,13 @@ namespace EntityFrameworkCoreHiddenGems
                     LastName = "Jiménez"
                 });
 
+            context.Authors.Add(
+                new Author
+                {
+                    FirstName = "Rabindranath",
+                    LastName = "Tagore"
+                });
+
             context.SaveChanges();
         }
     }
