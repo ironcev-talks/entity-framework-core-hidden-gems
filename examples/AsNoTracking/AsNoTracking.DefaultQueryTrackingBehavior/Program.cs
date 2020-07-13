@@ -1,5 +1,7 @@
 ﻿using AsNoTracking;
 using System;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace EntityFrameworkCoreHiddenGems
 {
@@ -15,16 +17,26 @@ namespace EntityFrameworkCoreHiddenGems
 
             DisplayDemoStep("Get authors");
 
-            foreach (var author in authorService.GetAuthors())
-                Console.WriteLine(author.FullName);
+            DisplayAuthorsNames(authorService.GetAuthors());
+
+            Console.ReadKey(true);
 
             DisplayDemoStep("Do something with authors");
 
             authorService.DoSomethingWithAuthors();
 
+            Console.ReadKey(true);
+
             DisplayDemoStep("Get authors again");
 
-            foreach (var author in authorService.GetAuthors())
+            DisplayAuthorsNames(authorService.GetAuthors());
+        }
+
+        private static void DisplayAuthorsNames(IEnumerable<Author> authors)
+        {
+            Thread.Sleep(500); // A quick and dirty way to avoid overlapping of this and EF logging output.
+
+            foreach (var author in authors)
                 Console.WriteLine(author.FullName);
         }
 
