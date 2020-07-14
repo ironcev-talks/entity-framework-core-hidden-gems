@@ -58,6 +58,20 @@ namespace ValueConversions
                     x => "let it be " + x.ToString().ToLowerInvariant(),
                     x => Convert.ToBoolean(x.Replace("let it be ", string.Empty))
                 );
+
+            var boolToMyOwnTruthConverter = new ValueConverter<bool, string>
+                (
+                    x => "let it be " + x.ToString().ToLowerInvariant(),
+                    x => Convert.ToBoolean(x.Replace("let it be ", string.Empty))
+                );
+
+            modelBuilder.Entity<BeTrue>()
+                .Property(x => x.HisOwnTruth)
+                .HasConversion(boolToMyOwnTruthConverter);
+
+            modelBuilder.Entity<BeTrue>()
+                .Property(x => x.HerOwnTruth)
+                .HasConversion(boolToMyOwnTruthConverter);
         }
     }
 }

@@ -22,6 +22,8 @@ namespace EntityFrameworkCoreHiddenGems
                 JaNein = true,
                 Jn = true,
                 MyOwnTruth = true,
+                HisOwnTruth = true,
+                HerOwnTruth = true,
                 OneMinusOne = true,
                 TrueFalse = true,
                 YesNo = true,
@@ -42,6 +44,8 @@ namespace EntityFrameworkCoreHiddenGems
                     beTrue.JaNein ||
                     beTrue.Jn ||
                     !beTrue.MyOwnTruth ||
+                    !beTrue.HisOwnTruth ||
+                    !beTrue.HerOwnTruth ||
                     !beTrue.OneMinusOne ||
                     !beTrue.TrueFalse ||
                     !beTrue.YesNo ||

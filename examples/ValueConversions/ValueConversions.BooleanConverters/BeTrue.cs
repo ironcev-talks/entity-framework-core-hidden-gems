@@ -27,5 +27,9 @@
         public bool Sn { get; set; }
 
         public bool MyOwnTruth { get; set; }
+
+        public bool HisOwnTruth { get; set; }
+
+        public bool HerOwnTruth { get; set; }
     }
 }
