@@ -35,11 +35,15 @@ namespace EntityFrameworkCoreHiddenGems
             // Sleep injection :-) Yeee :-) Just to make "sure" logs are displayed on the console in a decent manner.
             Thread.Sleep(111);
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
             Console.WriteLine();
             Console.WriteLine(border);
             Console.WriteLine(demoStepTitle);
             Console.WriteLine(border);
             Console.WriteLine();
+
+            Console.ResetColor();
         }
     }
 }
