@@ -60,7 +60,7 @@ namespace EntityFrameworkCoreHiddenGems
             DisplayDemoStep("Get all be trues from the database");
 
             foreach (var beTrue in context.BeTrues.ToList())
-                Console.WriteLine(beTrue.MyOwnTruth);
+                DisplayText(beTrue.MyOwnTruth.ToString());
         }
     }
 }

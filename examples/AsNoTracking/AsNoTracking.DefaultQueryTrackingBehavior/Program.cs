@@ -37,7 +37,7 @@ namespace EntityFrameworkCoreHiddenGems
             Thread.Sleep(500); // A quick and dirty way to avoid overlapping of this and EF logging output.
 
             foreach (var author in authors)
-                Console.WriteLine(author.FullName);
+                DisplayText(author.FullName);
         }
 
         private static void SeedDatabase(AsNoTrackingContext context)

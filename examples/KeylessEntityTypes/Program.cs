@@ -20,7 +20,7 @@ namespace EntityFrameworkCoreHiddenGems
             var blogPostCounts = context.BlogPostCounts.Where(counts => counts.NumberOfPosts > 1).ToList();
 
             foreach (var blogPost in blogPostCounts)
-                Console.WriteLine($"{blogPost.BlogTitle}\t{blogPost.NumberOfPosts}");
+                DisplayText($"{blogPost.BlogTitle}\t{blogPost.NumberOfPosts}");
         }
 
         private static void SeedDatabase(KeylessEntityTypesContext context)

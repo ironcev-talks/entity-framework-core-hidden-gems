@@ -34,12 +34,12 @@ namespace EntityFrameworkCoreHiddenGems
 
             DisplayDemoStep("Displaying the loaded entities");
 
-            Console.WriteLine($"Loaded entity with constructor and properties:{Environment.NewLine}" +
+            DisplayText($"Loaded entity with constructor and properties:{Environment.NewLine}" +
                               $"{nameof(EntityWithConstructorAndProperties.Id)} = {loadedEntityWithConstructorAndProperties.Id}{Environment.NewLine}" +
                               $"{nameof(EntityWithConstructorAndProperties.SomeProperty)} = {loadedEntityWithConstructorAndProperties.SomeProperty}{Environment.NewLine}" +
                               $"{nameof(EntityWithConstructorAndProperties.SomeOtherProperty)} = {loadedEntityWithConstructorAndProperties.SomeOtherProperty}{Environment.NewLine}");
 
-            Console.WriteLine($"Loaded entity constructor and fields:{Environment.NewLine}" +
+            DisplayText($"Loaded entity constructor and fields:{Environment.NewLine}" +
                               $"{nameof(EntityWithConstructorAndFields.Id)} = {loadedEntityWithConstructorAndFields.Id}{Environment.NewLine}" +
                               $"{nameof(EntityWithConstructorAndFields.GetSomeValue)} = {loadedEntityWithConstructorAndFields.GetSomeValue()}{Environment.NewLine}" +
                               $"{nameof(EntityWithConstructorAndFields.GetSomeOtherValue)} = {loadedEntityWithConstructorAndFields.GetSomeOtherValue()}{Environment.NewLine}");

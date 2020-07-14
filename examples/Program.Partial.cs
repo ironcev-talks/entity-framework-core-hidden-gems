@@ -45,5 +45,16 @@ namespace EntityFrameworkCoreHiddenGems
 
             Console.ResetColor();
         }
+
+        private static void DisplayText(string text)
+        {
+            Thread.Sleep(11);
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.WriteLine(text);
+
+            Console.ResetColor();
+        }
     }
 }

@@ -35,9 +35,9 @@ namespace EntityFrameworkCoreHiddenGems
 
             var entity = context.SomeEntities.FirstOrDefault(entity => entity.SomeInt == someInt);
             if (entity is null)
-                Console.WriteLine($"The entity with {nameof(SomeEntity.SomeInt)} equals to {someInt} NOT found.");
+                DisplayText($"The entity with {nameof(SomeEntity.SomeInt)} equals to {someInt} NOT found.");
             else
-                Console.WriteLine($"The entity with {nameof(SomeEntity.SomeInt)} equals to {someInt} found.");
+                DisplayText($"The entity with {nameof(SomeEntity.SomeInt)} equals to {someInt} found.");
 
             Console.ReadLine();
 
@@ -46,9 +46,9 @@ namespace EntityFrameworkCoreHiddenGems
 
             var entities = context.SomeEntities.Where(entity => entity.SomeInt < someInt).ToList();
             if (!entities.Any())
-                Console.WriteLine($"Entities with {nameof(SomeEntity.SomeInt)} less then {someInt} NOT found.");
+                DisplayText($"Entities with {nameof(SomeEntity.SomeInt)} less then {someInt} NOT found.");
             else
-                Console.WriteLine($"Entities with {nameof(SomeEntity.SomeInt)} less then {someInt} found.");
+                DisplayText($"Entities with {nameof(SomeEntity.SomeInt)} less then {someInt} found.");
 
             Console.ReadLine();
 
@@ -70,7 +70,7 @@ namespace EntityFrameworkCoreHiddenGems
             entities = context.SomeEntities.OrderBy(entity => entity.SomeInt).ToList();
 
             foreach (var someEntity in entities)
-                Console.WriteLine(someEntity.SomeInt);
+                DisplayText(someEntity.SomeInt.ToString());
 
             Console.ReadLine();
         }

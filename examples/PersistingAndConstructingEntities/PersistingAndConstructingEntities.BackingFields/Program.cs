@@ -37,12 +37,12 @@ namespace EntityFrameworkCoreHiddenGems
 
             DisplayDemoStep("Displaying the loaded entities");
 
-            Console.WriteLine($"Loaded entity with rich properties:{Environment.NewLine}" +
+            DisplayText($"Loaded entity with rich properties:{Environment.NewLine}" +
                               $"{nameof(EntityWithRichProperties.Id)} = {loadedEntityWithRichProperties.Id}{Environment.NewLine}" +
                               $"{nameof(EntityWithRichProperties.SomePropertyWithRichLogic)} = {loadedEntityWithRichProperties.SomePropertyWithRichLogic}{Environment.NewLine}" +
                               $"{nameof(EntityWithRichProperties.SomeOtherPropertyWithRichLogic)} = {loadedEntityWithRichProperties.SomeOtherPropertyWithRichLogic}{Environment.NewLine}");
 
-            Console.WriteLine($"Loaded entity without properties:{Environment.NewLine}" +
+            DisplayText($"Loaded entity without properties:{Environment.NewLine}" +
                               $"{nameof(EntityWithoutProperties.GetId)} = {loadedEntityWithoutProperties.GetId()}{Environment.NewLine}" +
                               $"{nameof(EntityWithoutProperties.GetSomeValue)} = {loadedEntityWithoutProperties.GetSomeValue()}{Environment.NewLine}" +
                               $"{nameof(EntityWithoutProperties.GetSomeOtherValue)} = {loadedEntityWithoutProperties.GetSomeOtherValue()}{Environment.NewLine}");
