@@ -11,7 +11,7 @@ namespace EntityFrameworkCoreHiddenGems
                 .Create(builder =>
                     builder
                         .AddConsole()
-                        .AddFilter((s, l) => l == LogLevel.Information && !s.EndsWith("Connection"))
+                        .AddFilter((s, l) => (l == LogLevel.Information || l == LogLevel.Warning) && !s.EndsWith("Connection"))
                 );
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
