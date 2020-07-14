@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueConversions.BooleanCon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueConversions.OtherToStringBuiltInConverters", "ValueConversions\ValueConversions.OtherToStringBuiltInConverters\ValueConversions.OtherToStringBuiltInConverters.csproj", "{52E6D9CC-C0A3-479B-9B7A-45D807F53E1A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueConversions.Limitations", "ValueConversions\ValueConversions.Limitations\ValueConversions.Limitations.csproj", "{FAB31418-691C-45D6-A247-E06911BD84F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{52E6D9CC-C0A3-479B-9B7A-45D807F53E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52E6D9CC-C0A3-479B-9B7A-45D807F53E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52E6D9CC-C0A3-479B-9B7A-45D807F53E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB31418-691C-45D6-A247-E06911BD84F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB31418-691C-45D6-A247-E06911BD84F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB31418-691C-45D6-A247-E06911BD84F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB31418-691C-45D6-A247-E06911BD84F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

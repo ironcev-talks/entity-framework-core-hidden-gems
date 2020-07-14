@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\BaseDemoDbContext.cs" Link="BaseDemoDbContext.cs" />
+    <Compile Include="..\..\Program.Partial.cs" Link="Program.Partial.cs" />
+    <Compile Include="..\ValueConversions.OtherToStringBuiltInConverters\SomeEntity.cs" Link="SomeEntity.cs" />
+    <Compile Include="..\ValueConversions.OtherToStringBuiltInConverters\ValueConversionsContext.cs" Link="ValueConversionsContext.cs" />
+  </ItemGroup>
+
+</Project>
