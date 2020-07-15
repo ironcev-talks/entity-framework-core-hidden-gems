@@ -12,4 +12,8 @@
     <Compile Include="..\ValueConversions.OtherToStringBuiltInConverters\ValueConversionsContext.cs" Link="ValueConversionsContext.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\README.md" Link="README.md" />
+  </ItemGroup>
+
 </Project>

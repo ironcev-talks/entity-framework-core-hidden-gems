@@ -13,4 +13,8 @@
     <Compile Include="..\AsNoTracking.DefaultQueryTrackingBehavior\Program.cs" Link="Program.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\README.md" Link="README.md" />
+  </ItemGroup>
+
 </Project>

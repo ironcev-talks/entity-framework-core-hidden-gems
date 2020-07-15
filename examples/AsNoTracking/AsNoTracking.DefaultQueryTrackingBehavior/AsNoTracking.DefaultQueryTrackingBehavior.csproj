@@ -10,4 +10,8 @@
     <Compile Include="..\..\Program.Partial.cs" Link="Program.Partial.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\README.md" Link="README.md" />
+  </ItemGroup>
+
 </Project>
